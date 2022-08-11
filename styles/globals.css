@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply flex justify-center w-full py-5 mt-0 hover:bg-gray-600 hover:text-white
+    }
+}
