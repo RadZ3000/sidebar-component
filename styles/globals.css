@@ -4,6 +4,6 @@
 
 @layer components {
     .btn {
-        @apply flex justify-center w-full py-5 mt-0 hover:bg-gray-600 hover:text-white
+        @apply flex justify-center w-full py-5 text-lg hover:bg-gray-600 hover:text-white
     }
 }
