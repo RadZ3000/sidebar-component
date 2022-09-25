@@ -22,6 +22,8 @@ import Support from '../components/Support';
 import Team from '../components/Team';
 import Upgrade from '../components/Upgrade';
 
+import { Tooltip } from '@nextui-org/react';
+
 const Home: NextPage = () => {
 
   // create hook to change state depending on item selected on the DOM
@@ -58,7 +60,7 @@ const Home: NextPage = () => {
       <div className="flex flex-row">
         <div className="min-h-screen w-16 bg-neutral-800 text-slate-400 flex flex-col items-center">
           <div className="flex justify-center items-center py-1 w-full bg-red-400 text-4xl text-white h-14"><a href="#" className="h-9 w-9"><ChatBubbleBottomCenterTextIcon /></a></div>
-          <a id="projects" href="#" className="btn" onClick={changeDisplay}><div className="w-5"><BriefcaseIcon /></div><p className="hidden hover:block">Stuff</p></a>
+          <a id="projects" href="#" className="btn" onClick={changeDisplay}><Tooltip content="Projects" placement="right"><div className="w-5"><BriefcaseIcon /></div></Tooltip></a>
           <a id="contacts" href="#" className="btn" onClick={changeDisplay}><div className="w-5"><AtSymbolIcon /></div></a>
           <a id="calendar" href="#" className="btn" onClick={changeDisplay}><div className="w-5"><CalendarDaysIcon /></div></a>
           <a id="team" href="#" className="btn" onClick={changeDisplay}><div className="w-5"><UserGroupIcon /></div></a>
