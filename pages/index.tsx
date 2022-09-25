@@ -54,19 +54,25 @@ const Home: NextPage = () => {
     { name: "upgrade", id: 7, title: "Upgrade", val: <Upgrade /> },
   ]
 
+  const buttonsArr = [
+    { name: <BriefcaseIcon />, id: "projects", content: "Projects", key: "1" },
+    { name: <AtSymbolIcon />, id: "contacts", content: "Contacts", key: "2" },
+    { name: <CalendarDaysIcon />, id: "calendar", content: "Calendar", key: "3" },
+    { name: <UserGroupIcon />, id: "team", content: "Team", key: "4" },
+    { name: <ArrowUpCircleIcon />, id: "upgrade", content: "Upgrade", key: "5" },
+    { name: <AdjustmentsVerticalIcon />, id: "settings", content: "Settings", key: "6" },
+    { name: <InformationCircleIcon />, id: "support", content: "Support", key: "7" },
+  ]
+
   return (
     <div className="bg-slate-300">
 
       <div className="flex flex-row">
         <div className="min-h-screen w-16 bg-neutral-800 text-slate-400 flex flex-col items-center">
           <div className="flex justify-center items-center py-1 w-full bg-red-400 text-4xl text-white h-14"><a href="#" className="h-9 w-9"><ChatBubbleBottomCenterTextIcon /></a></div>
-          <a id="projects" href="#" className="btn" onClick={changeDisplay}><Tooltip content="Projects" placement="right"><div className="w-5"><BriefcaseIcon /></div></Tooltip></a>
-          <a id="contacts" href="#" className="btn" onClick={changeDisplay}><div className="w-5"><AtSymbolIcon /></div></a>
-          <a id="calendar" href="#" className="btn" onClick={changeDisplay}><div className="w-5"><CalendarDaysIcon /></div></a>
-          <a id="team" href="#" className="btn" onClick={changeDisplay}><div className="w-5"><UserGroupIcon /></div></a>
-          <a id="upgrade" href="#" className="btn" onClick={changeDisplay}><div className="w-5"><ArrowUpCircleIcon /></div></a>
-          <a id="settings" href="#" className="btn" onClick={changeDisplay}><div className="w-5"><AdjustmentsVerticalIcon /></div></a>
-          <a id="support" href="#" className="btn" onClick={changeDisplay}><div className="w-5"><InformationCircleIcon /></div></a>
+          {buttonsArr.map(({ name, id, content, key }) => (
+            <a id={id} key={key} href="#" className="btn" onClick={changeDisplay}><Tooltip content={content} placement="right"><div className="w-5">{name}</div></Tooltip></a>
+          ))}
           <div className="flex justify-center"><a href="#" className="absolute bottom-16 rounded-full bg-white text-slate-700 w-max h-max text-base p-2 hover:bg-gray-600 hover:text-white"><FaUser /></a></div>
         </div>
 
