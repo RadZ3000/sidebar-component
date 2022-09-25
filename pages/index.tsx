@@ -28,8 +28,8 @@ const Home: NextPage = () => {
 
   // create hook to change state depending on item selected on the DOM
 
-  const [display, setDisplay] = useState(<Projects />);
-  const [title, setTitle] = useState("Projects");
+  let [display, setDisplay] = useState(<Projects />);
+  let [title, setTitle] = useState("Projects");
 
   const changeDisplay = (e: any) => {
     let id = e.currentTarget.id;
