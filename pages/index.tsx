@@ -73,7 +73,7 @@ const Home: NextPage = () => {
           {buttonsArr.map(({ name, id, content, key }) => (
             <a id={id} key={key} href="#" className="btn" onClick={changeDisplay}><Tooltip content={content} placement="right"><div className="w-5">{name}</div></Tooltip></a>
           ))}
-          <div className="flex justify-center"><a href="#" className="absolute bottom-16 rounded-full bg-white text-slate-700 w-max h-max text-base p-2 hover:bg-gray-600 hover:text-white"><FaUser /></a></div>
+          <div className="flex justify-center"><a href="#" className="absolute bottom-16 rounded-full bg-white text-slate-700 w-max h-max text-base p-2"><FaUser /></a></div>
         </div>
 
         <div className="grid grid-rows-6 w-screen h-screen">
